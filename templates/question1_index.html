@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin: 5px 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Question 1</h1>
+    <p><strong>Clue:</strong> What year did humans first land on the moon?</p>
+
+    <!-- Form for submitting the answer -->
+    <form method="POST" action="{{ url_for('question1') }}">
+        <input type="text" name="user_code" placeholder="Enter your answer" required />
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Message feedback (if any) -->
+    <div id="message"></div>
+</body>
+</html>
+
